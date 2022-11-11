@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Site</title>
+</head>
+<body>
+<div>
+<h2>Lorem ipsum dolor sit.</h2>
+<p>To jest pierwszy akapit, który zawiera dwadzieścia słów. Testujemy umiejętność posługiwania się kaskadowym arkuszem stylów czyli CSS. <span class="strong">To jest super.</span></p>
+<p class="second">To jest drugi akapit, który zawiera dwadzieścia słów. Testujemy umiejętność posługiwania się kaskadowym arkuszem stylów czyli CSS. To jest super.</p>
+<p>To jest trzeci akapit, który zawiera dwadzieścia słów. Testujemy umiejętność posługiwania się kaskadowym arkuszem stylów czyli CSS. To jest super.</p>
+<p class="last">To jest czwarty akapit, który zawiera dwadzieścia słów. Testujemy umiejętność posługiwania się kaskadowym arkuszem stylów czyli CSS. To jest super.</p>
+</div>
+</body>
+</html>
