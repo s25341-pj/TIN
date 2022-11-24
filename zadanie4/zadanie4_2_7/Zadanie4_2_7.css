@@ -1,0 +1,23 @@
+div.box1 {
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    border: 5px solid black;
+    border-bottom-color: gray;
+    background-image: repeating-linear-gradient(to right, white, white 27.5px, black 27.5px, black 57px);
+}
+
+div.box2{
+    width: 216px;
+    height: 198px;
+    margin: 10px;
+    border: 5px solid black;
+    border-right-width: 15px;
+    border-bottom-color: gray;
+    background:
+            linear-gradient(-135deg, transparent 75%, black 0%) 0 0,
+            linear-gradient(135deg, transparent 75%, black 0%) 0 0,
+            linear-gradient(45deg, transparent 75%, black 0%) 27px 0,
+            linear-gradient(-45deg, transparent 75%, black 0%) -27px 0;
+    background-size: 54px 57px;
+}
