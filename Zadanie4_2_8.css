@@ -1,7 +1,0 @@
-p::selection{
-    color: green;
-}
-
-input:focus {
-    background-color: green;
-}
