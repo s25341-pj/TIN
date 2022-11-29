@@ -1,0 +1,43 @@
+div {
+    background:
+            linear-gradient(0deg, transparent 93.5%, grey 0%) 0 0,
+            linear-gradient(90deg, transparent 97%, grey 0%) 0 0,
+            linear-gradient(270deg, transparent 97%, grey 0%) 0 0,
+            linear-gradient(180deg, transparent 93.5%, grey 0%) 0 0;
+    box-sizing: border-box;
+    width: 710px;
+    height: 310px;
+    padding: 20px;
+    border-top-style: groove;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: groove;
+    margin: 20px;
+}
+
+div div{
+    background: white;
+    box-sizing: border-box;
+    width: 620px;
+    height: 218px;
+    padding: 1%;
+    border: 1px groove black;
+    margin: 23px;
+    outline-style: solid;
+    outline-color: grey;
+    outline-width: 15px;
+}
+
+div div div{
+    background: lightgrey;
+    box-sizing: border-box;
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    border-top-style: groove;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-style: groove;
+    margin: 1px;
+    outline-color: white;
+}
