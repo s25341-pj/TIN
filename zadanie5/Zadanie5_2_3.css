@@ -1,0 +1,73 @@
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 2px grey;
+    background: lightgrey;
+}
+
+div{
+    background: lightgrey;
+    box-sizing: auto;
+    box-shadow: 2px 2px 2px 2px grey;
+    margin: 25px;
+    margin-left: 33%;
+    width: 600px;
+    clear: both;
+    padding: 10px;
+}
+
+.name{
+    position: relative;
+    left: 62px;
+    font-weight: bold;
+}
+
+.description{
+    position: relative;
+    left: 0px;
+    font-weight: bold;
+}
+
+.value{
+    position: relative;
+    left: 56px;
+    font-weight: bold;
+}
+
+.save{
+    position: relative;
+    left: 520px;
+    background: darkgrey;
+    color: white;
+}
+
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table{
+    text-align: left;
+}
+
+thead{
+    font-family: Arial, Helvetica, sans-serif;
+    background: grey;
+}
+
+.opis{
+    text-align: justify;
+    padding-right: 1em;
+}
+
+tr:nth-child(even) {
+    background: darkgrey;
+}
+
+legend{
+    letter-spacing: 3px;
+}
+
