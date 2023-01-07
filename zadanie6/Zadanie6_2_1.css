@@ -1,0 +1,25 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items:stretch;
+}
+div
+{
+    padding-top: 30px;
+    font-size: 5em;
+    text-align: center;
+    min-width: 10%;
+    color:white;
+}
+#div0{background-color: rosybrown;order:2;}
+#div1{background-color: darkgreen;order:9;}
+#div2{background-color: pink;order:1;}
+#div3{background-color: darkgray;order:3;}
+#div4{background-color: yellow;order:4;}
+#div5{background-color: lawngreen;order:5;}
+#div6{background-color: brown;order:10}
+#div7{background-color: deepskyblue;order:6;}
+#div8{background-color: darkorange;order:7;}
+#div9{background-color: sandybrown;order:8}
