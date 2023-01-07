@@ -1,0 +1,27 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+div
+{
+    padding-top:10px;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100px;
+    min-height: 100px;
+}
+#div1{
+    background-color: #ccc;
+    align-self: flex-start;
+}
+#div2{background-color: #aaa;}
+#div3{
+    background-color: #bbb;
+    align-self: flex-end;
+}
