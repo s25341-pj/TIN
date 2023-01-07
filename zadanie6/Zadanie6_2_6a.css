@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.boxes-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+.box {
+    font-weight: bold;
+    font-size: 21px;
+    background: lightyellow;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding-top: 10px;
+}
+.box9{
+    background: coral;
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+.box11{
+    background: lightgrey;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+.box16{
+    background: teal;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+.box29{
+    background: saddlebrown;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
