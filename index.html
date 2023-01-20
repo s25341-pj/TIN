@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
+</head>
+<body>
+<h1 id="header">Tic-Tac-Toe</h1>
+<div id="players">
+    <label for="player-x">Player 1:</label>
+    <input type="text" id="player-x" placeholder="Enter name">
+    <label for="player-o">Player 2:</label>
+    <input type="text" id="player-o" placeholder="Enter name">
+</div>
+<div id="options">
+    <label for="board-size">Board Size:</label>
+    <select id="board-size">
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+    </select>
+    <label for="first-player">First Player:</label>
+    <select id="first-player">
+        <option value="X">X</option>
+        <option value="O">O</option>
+    </select>
+    <button id="start-button">Start</button>
+    <button id="undo-button">Undo</button>
+</div>
+<div id="stats">
+    <div id="player-x-wins">Player 1 wins: <span id="player-x-wins-count">0</span></div>
+    <div id="player-o-wins">Player 2 wins: <span id="player-o-wins-count">0</span></div>
+    <div id="ties">Draw: <span id="ties-count">0</span></div>
+</div>
+<div id="timer">
+    <div id="time">Time: <span id="time-count">0</span> sec</div>
+    <button id="pause-button">Pause</button>
+    <button id="resume-button">Resume</button>
+</div>
+<div>
+    <button id="mute-button" onclick="muteBackgroundMusic()">Mute</button>
+    <audio id="background-music" autoplay loop>
+        <source src="./file/music.mp3" type="audio/mpeg">
+    </audio>
+</div>
+<table id="board"></table>
+<script src="script.js"></script>
+<footer>
+    <p>Copyright 2023 Tic-Tac-Toe Created by: Dawid Feister</p>
+</footer>
+</body>
+</html>
