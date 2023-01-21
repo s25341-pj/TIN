@@ -11,6 +11,7 @@ const resumeButton = document.getElementById("resume-button");
 const playerXWinsCount = document.getElementById("player-x-wins-count");
 const playerOWinsCount = document.getElementById("player-o-wins-count");
 const tiesCount = document.getElementById("ties-count");
+
 let cells = [];
 let currentPlayer;
 let moves = [];
@@ -20,6 +21,11 @@ let playerXWins = 0;
 let playerOWins = 0;
 let ties = 0;
 
+var backgroundMusic = document.getElementById("background-music");
+backgroundMusic.volume = 0.5;
+
+// load state when the page is loaded
+window.addEventListener("load", loadState);
 
 pauseButton.addEventListener("click", function () {
     clearInterval(timer);
@@ -47,6 +53,7 @@ startButton.addEventListener("click", function () {
         createBoard();
         resetTime();
         timer = setInterval(updateTime, 1000);
+        saveState();
     }
 });
 
@@ -176,9 +183,7 @@ function reset() {
     moves = [];
 }
 
-var backgroundMusic = document.getElementById("background-music");
-backgroundMusic.volume = 100;
-
+//mute / unmute music
 function muteBackgroundMusic() {
     if (backgroundMusic.muted) {
         backgroundMusic.muted = false;
@@ -187,4 +192,38 @@ function muteBackgroundMusic() {
         backgroundMusic.muted = true;
         document.getElementById("mute-button").innerHTML = "Unmute";
     }
+}
+
+// Save game state to Local Storage
+function saveState() {
+    localStorage.setItem("playerX", playerX.value);
+    localStorage.setItem("playerO", playerO.value);
+    localStorage.setItem("boardSize", boardSize.value);
+    localStorage.setItem("firstPlayer", firstPlayer.value);
+    localStorage.setItem("currentPlayer", currentPlayer);
+    localStorage.setItem("playerXWins", playerXWins);
+    localStorage.setItem("playerOWins", playerOWins);
+    localStorage.setItem("ties", ties);
+    localStorage.setItem("time", time);
+    localStorage.setItem("cells", JSON.stringify(cells.map(cell => cell.textContent)));
+    localStorage.setItem("moves", JSON.stringify(moves));
+}
+
+// Load game state from Local Storage
+function loadState() {
+    playerX.value = localStorage.getItem("playerX") || "";
+    playerO.value = localStorage.getItem("playerO") || "";
+    boardSize.value = localStorage.getItem("boardSize") || "3";
+    firstPlayer.value = localStorage.getItem("firstPlayer") || "X";
+    currentPlayer = localStorage.getItem("currentPlayer") || firstPlayer.value;
+    playerXWins = parseInt(localStorage.getItem("playerXWins")) || 0;
+    playerOWins = parseInt(localStorage.getItem("playerOWins")) || 0;
+    ties = parseInt(localStorage.getItem("ties")) || 0;
+    time = parseInt(localStorage.getItem("time")) || 0;
+    cells = JSON.parse(localStorage.getItem("cells")) || [];
+    moves = JSON.parse(localStorage.getItem("moves")) || [];
+    playerXWinsCount.textContent = playerXWins;
+    playerOWinsCount.textContent = playerOWins;
+    tiesCount.textContent = ties;
+    timeCount.textContent = time;
 }
